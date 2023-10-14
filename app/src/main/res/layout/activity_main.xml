@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/namoh_ss"
+    tools:context=".MainActivity" >
+
+    <ImageButton
+        android:id="@+id/GDSC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="196dp"
+        android:layout_marginEnd="21dp"
+        android:layout_marginBottom="34dp"
+        android:backgroundTint="#00FFFFFF"
+        android:contentDescription="what is gdsc?"
+        app:layout_constraintBottom_toTopOf="@+id/RSVP"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/screenshot_2023_10_14_165809" />
+
+    <ImageButton
+        android:id="@+id/RSVP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="38dp"
+        android:layout_marginEnd="18dp"
+        android:backgroundTint="#00FFFFFF"
+        android:contentDescription="future events"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/GDSC"
+        app:srcCompat="@drawable/screenshot_2023_10_14_165831" />
+
+    <ImageButton
+        android:id="@+id/TEAM"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="38dp"
+        android:layout_marginEnd="18dp"
+        android:backgroundTint="#00FFFFFF"
+        android:contentDescription="the team"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/RSVP"
+        app:srcCompat="@drawable/screenshot_2023_10_14_165842" />
+</androidx.constraintlayout.widget.ConstraintLayout>

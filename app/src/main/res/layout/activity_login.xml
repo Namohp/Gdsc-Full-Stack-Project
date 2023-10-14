@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/google_colors_by_jesssaysno_df2n2hn_fullview"
+    >
+
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="351dp"
+        android:layout_height="186dp"
+        android:background="#99FFFFFF"
+        android:contentDescription="GDSC Image"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.226"
+        app:srcCompat="@drawable/gdsc_social_share_removebg_preview" />
+
+    <TextView
+        android:layout_width="102dp"
+        android:layout_height="29dp"
+        android:text="Login"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textColor="@color/material_dynamic_neutral30"
+        android:textColorHighlight="@color/material_dynamic_neutral10"
+        android:textSize="20sp"
+        app:emojiCompatEnabled="true"
+        app:flow_horizontalAlign="center"
+        app:flow_verticalAlign="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.579"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.377" />
+
+    <EditText
+        android:id="@+id/loginemail"
+        style="@style/Widget.AppCompat.EditText"
+        android:layout_width="360dp"
+        android:layout_height="54dp"
+        android:layout_marginEnd="20dp"
+        android:accessibilityLiveRegion="none"
+        android:backgroundTint="@color/white"
+        android:hint="Email"
+        android:singleLine="true"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <EditText
+        android:id="@+id/loginpass"
+        style="@style/Widget.AppCompat.EditText"
+        android:layout_width="359dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="35dp"
+        android:backgroundTint="@color/white"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:password="true"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        app:layout_constraintBottom_toTopOf="@+id/Loginbtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:passwordToggleEnabled="true" />
+
+    <Button
+        android:id="@+id/Loginbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="161dp"
+        android:layout_marginBottom="113dp"
+        android:backgroundTint="#7CB342"
+        android:text="Login"
+        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginBottom="129dp"
+        android:text="Pro Tip: You have to register first to login. Register here! "
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

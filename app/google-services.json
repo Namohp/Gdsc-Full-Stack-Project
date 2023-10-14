@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "68655468558",
+    "project_id": "gdsc-adypu",
+    "storage_bucket": "gdsc-adypu.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:68655468558:android:c134cb0d1d49510ae1ec5f",
+        "android_client_info": {
+          "package_name": "com.example.gdsc_adypu"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDpYoJEcD6AszUkykWU6OWf2PZLv22NPRo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
