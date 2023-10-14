@@ -17,6 +17,7 @@
         android:backgroundTint="#75070707"
         android:fontFamily="@font/paytone_one"
         android:text="Upcoming Events:"
+        android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -82,5 +83,23 @@
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/backbtn"
+        android:layout_width="100dp"
+        android:layout_height="63dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="306dp"
+        android:layout_marginBottom="827dp"
+        android:backgroundTint="#00FFFFFF"
+        android:contentDescription="back"
+        app:icon="@android:drawable/ic_menu_revert"
+        app:iconTint="#020202"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

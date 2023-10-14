@@ -13,7 +13,7 @@ import com.google.firebase.database.ValueEventListener
 
 class LoginActivity : AppCompatActivity() {
 
-    private lateinit var binding : ActivityLoginBinding
+    private lateinit var binding: ActivityLoginBinding
     private lateinit var firebaseDatabase: FirebaseDatabase
     private lateinit var databaseReference: DatabaseReference
 
@@ -22,48 +22,65 @@ class LoginActivity : AppCompatActivity() {
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        firebaseDatabase= FirebaseDatabase.getInstance()
-        databaseReference= firebaseDatabase.reference.child("users")
+        firebaseDatabase = FirebaseDatabase.getInstance()
+        databaseReference = firebaseDatabase.reference.child("users")
 
-        binding.Loginbtn.setOnClickListener{
+        binding.Loginbtn.setOnClickListener {
             val loginUsername = binding.loginemail.text.toString()
             val loginPassword = binding.loginpass.text.toString()
 
-            if (loginUsername.isNotEmpty() && loginPassword.isNotEmpty()){
-                loginUser(loginUsername,loginPassword)
-            }else{
-                Toast.makeText(this@LoginActivity,"Field should not be empty",Toast.LENGTH_SHORT).show()
+            if (loginUsername.isNotEmpty() && loginPassword.isNotEmpty()) {
+                loginUser(loginUsername, loginPassword)
+            } else {
+                Toast.makeText(this@LoginActivity, "Field should not be empty", Toast.LENGTH_SHORT)
+                    .show()
             }
         }
         binding.textView2.setOnClickListener {
-            startActivity((Intent(this@LoginActivity , SignupActivity::class.java)))
+            startActivity((Intent(this@LoginActivity, SignupActivity::class.java)))
             finish()
         }
     }
 
-    private fun loginUser(username:String, password:String){
-        databaseReference.orderByChild("username").equalTo(username).addListenerForSingleValueEvent(object :ValueEventListener{
-            override fun onDataChange(dataSnapshot: DataSnapshot) {
-                if (dataSnapshot.exists()){
-                    for(userSnapshot in dataSnapshot.children){
-                        val userData = userSnapshot.getValue(UserData::class.java)
+    private fun loginUser(username: String, password: String) {
+        databaseReference.orderByChild("username").equalTo(username)
+            .addListenerForSingleValueEvent(object : ValueEventListener {
+                override fun onDataChange(dataSnapshot: DataSnapshot) {
+                    if (dataSnapshot.exists()) {
+                        for (userSnapshot in dataSnapshot.children) {
+                            val userData = userSnapshot.getValue(UserData::class.java)
 
-                        if (userData != null && userData.password == password){
-                            Toast.makeText(this@LoginActivity,"Login Successful",Toast.LENGTH_SHORT).show()
-                            startActivity((Intent(this@LoginActivity, MainActivity::class.java)))
-                            finish()
-                            return
+                            if (userData != null && userData.password == password) {
+                                Toast.makeText(
+                                    this@LoginActivity,
+                                    "Login Successful",
+                                    Toast.LENGTH_SHORT
+                                ).show()
+                                startActivity(
+                                    (Intent(
+                                        this@LoginActivity,
+                                        MainActivity::class.java
+                                    ))
+                                )
+                                finish()
+                                return
+                            }
+
                         }
-
                     }
+                    Toast.makeText(this@LoginActivity, "Login failed", Toast.LENGTH_SHORT).show()
                 }
-                Toast.makeText(this@LoginActivity,"Login failed",Toast.LENGTH_SHORT).show()
-            }
 
-            override fun onCancelled(databaseError: DatabaseError) {
-                Toast.makeText(this@LoginActivity,"Database Error: ${databaseError.message}",Toast.LENGTH_SHORT).show()
+                override fun onCancelled(databaseError: DatabaseError) {
+                    Toast.makeText(
+                        this@LoginActivity,
+                        "Database Error: ${databaseError.message}",
+                        Toast.LENGTH_SHORT
+                    ).show()
 
-            }
-        })
+                }
+            })
     }
+
+
 }
